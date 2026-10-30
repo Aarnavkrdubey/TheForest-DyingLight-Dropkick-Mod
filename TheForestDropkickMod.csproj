@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4E81239-8C1B-4729-9B4A-53789D4E01C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheForestDropkickMod</RootNamespace>
+    <AssemblyName>TheForestDropkickMod</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <NoStdLib>true</NoStdLib>
+    <NoCompilerStandardLib>true</NoCompilerStandardLib>
+    <NoConfig>true</NoConfig>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <FileAlignment>512</FileAlignment>
+    <TheForestDir Condition=" '$(TheForestDir)' == '' ">C:\Program Files (x86)\Steam\steamapps\common\The Forest</TheForestDir>
+    <ManagedDir>$(TheForestDir)\TheForest_Data\Managed</ManagedDir>
+    <BepInExCoreDir Condition=" '$(BepInExCoreDir)' == '' ">$(TheForestDir)\BepInEx\core</BepInExCoreDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <HintPath>$(ManagedDir)\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>$(ManagedDir)\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>$(ManagedDir)\System.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(BepInExCoreDir)\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>$(BepInExCoreDir)\BepInEx.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>$(ManagedDir)\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(ManagedDir)\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Rewired_Core">
+      <HintPath>$(ManagedDir)\Rewired_Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PlayMaker">
+      <HintPath>$(ManagedDir)\PlayMaker.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="bolt">
+      <HintPath>$(ManagedDir)\bolt.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="bolt.user">
+      <HintPath>$(ManagedDir)\bolt.user.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TheForest.Modding">
+      <HintPath>$(ManagedDir)\TheForest.Modding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\DebugLogger.cs" />
+    <Compile Include="src\GameReflection.cs" />
+    <Compile Include="src\ModConfig.cs" />
+    <Compile Include="src\InputRemapManager.cs" />
+    <Compile Include="src\DropkickStateMachine.cs" />
+    <Compile Include="src\DropkickAnimator.cs" />
+    <Compile Include="src\DropkickCameraFeedback.cs" />
+    <Compile Include="src\DropkickHitDetector.cs" />
+    <Compile Include="src\EnemyCombatIntegration.cs" />
+    <Compile Include="src\RuntimeSelfTest.cs" />
+    <Compile Include="src\DropkickModPlugin.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,26 @@
+## Build Results
+[Bb]in/
+[Oo]bj/
+Release/PackageStaging/
+Release/Staging/
+
+## Visual Studio & IDEs
+.vs/
+*.user
+*.suo
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+
+## OS generated
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+## Logs
+*.log
