@@ -1,7 +1,7 @@
 # Dying Light-Style Dropkick Mod for The Forest (2018)
 
+[![Latest Release](https://img.shields.io/github/v/release/Aarnavkrdubey/TheForest-DyingLight-Dropkick-Mod?color=success&label=Release)](https://github.com/Aarnavkrdubey/TheForest-DyingLight-Dropkick-Mod/releases/latest)
 [![Game: The Forest](https://img.shields.io/badge/Game-The%20Forest%20(2018)-forestgreen.svg)](https://store.steampowered.com/app/242760/The_Forest/)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20x64-blue.svg)](https://dotnet.microsoft.com/)
 [![Mod Loader](https://img.shields.io/badge/Loader-BepInEx%205%20(x64)-orange.svg)](https://github.com/BepInEx/BepInEx)
 [![Patching](https://img.shields.io/badge/Hook-HarmonyX-red.svg)](https://github.com/BepInEx/HarmonyX)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
